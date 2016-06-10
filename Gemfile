@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
 
+gem 'simple_form'
 
 
 group :doc do
