@@ -1,8 +1,14 @@
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .navbar.navbar-inverse {
   border-radius: 0;
   background-color: transparent;
   background: transparent;
   border-color: transparent;
+  
 }
 
 .navbar-inverse .navbar-brand {
@@ -12,8 +18,18 @@
   letter-spacing: -0.5px;
 }
 
-.navbar {
-  color: red;
+.hero {
+  background: url('hero.JPG') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:599px;
+  position: relative;
+}
+
+.frosty {
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
 
