@@ -1,6 +1,46 @@
-<div class="hero">
-  <br />
-  <div class="frosty col-xs-10 col-xs-offset-1 text-center">
-<h1>Hello!</h1>
+<!-- Code for Carousel -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+       <%= image_tag 'slide1.JPG', class: 'img-responsive' %>      
+    </div>
+
+    <div class="item">
+    <%= image_tag 'slide2.JPG', class: 'img-responsive' %>    
+  </div>
+
+  <div class="item">
+    <%= image_tag 'slide3.jpg', class: 'img-responsive' %>    
+  </div>
+  </div>  
 </div>
+
+
+<!--search input -->
+<form role="input">
+  <div class="input-group col-xs-4 col-xs-offset-4">    
+    <input class="input-lg" type="text">
+    <button type="button" class="btn btn-danger btn-lg">Search</button>
+  </div>
+
+  </form>
+
+<br /><br /><br />
+
+<div class="col-xs-10 col-xs-offset-1 features text-center">
+  <h1>Attractions & Restaurants</h1> <br /><br />
+  <div class="col-sm-4">
+    <h1>Seoul</h1>
+  </div>
+
+  <div class="col-sm-4">
+    <h1>Busan</h1>
+  </div>
+
+  <div class="col-sm-4">
+    <h1>Jeju</h1>
+  </div>
 </div>
+
+

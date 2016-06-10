@@ -32,6 +32,7 @@ gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
 
 gem 'simple_form'
+gem 'devise', '>= 3.2.4'
 
 
 group :doc do
