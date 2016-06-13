@@ -2,8 +2,7 @@ class MainpageController < ApplicationController
   def index  
   end
 
-  def new
-    
+  def new    
   end
 
 end
