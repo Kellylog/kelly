@@ -135,12 +135,45 @@
 
 <!-- footer -->
 <div id="footer">
-    <div class="container">
-      <b>Footer Here</b>
-      <br />
-      <%= link_to 'Link', '#' %>
+  <div class="container">
+
+    <div class="col-xs-12 col-sm-3">
+        <b>ABCD</b>
+        <br />
+        <%= link_to 'abc', '#' %>        
+      </div>
+
+      <div class="col-xs-12 col-sm-3 about">
+        <b>About</b>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 social">
+        <b>Social</b>
+        <br />    
+        <%= link_to 'https://github.com/Kellylog' do %>
+        <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'https://www.facebook.com' do %>
+        <%= image_tag 'facebook.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'https://www.instagram.com' do %>
+        <%= image_tag 'instagram.png', class: 'social-button' %>
+        <% end %>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        kellylogblog@gmail.com
+        <br />
+        South Korea
+      </div>
     </div>
-  </div>
+</div>
 
 </body>
 </html>
