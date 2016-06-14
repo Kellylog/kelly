@@ -1,0 +1,101 @@
+<!-- Code for Carousel -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+       <%= image_tag 'slide1.JPG', class: 'img-responsive' %>      
+    </div>
+
+    <div class="item">
+    <%= image_tag 'slide2.JPG', class: 'img-responsive' %>    
+  </div>
+
+  <div class="item">
+    <%= image_tag 'slide3.jpg', class: 'img-responsive' %>    
+  </div>
+  </div>  
+</div>
+
+
+<!--search input example 1--><!--search input -->
+<div class="row">  
+  <div class="col-xs-3 col-xs-offset-4">
+    <div class="input-group input-group-lg">
+      <%= form_tag '#', method: :get do %>
+      <p>
+      <%= text_field_tag :search, params[:search], placeholder: "Where are you going?" %>
+      <%= submit_tag "Search", :name => nil, class: "btn btn-lg" %>   
+      </p>
+      <% end %>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+<!--search input example 2--><!--search input -->
+<div class="row">  
+  <div class="col-xs-3 col-xs-offset-4">
+    <div class="input-group input-group-lg">
+  <%= form_tag('#', :method => "get", id: "search-form") do %>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
+    <span class="input-group-btn">
+      <%= submit_tag "Search", class: 'btn btn-default' %>
+    </span>
+  </p>
+  <% end %>
+    </div>
+  </div>
+</div>
+
+
+<!--search input example 3--><!--search input -->
+<div class="row">  
+  <div class="col-xs-3 col-xs-offset-4">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <%= submit_tag "Search", class: 'btn btn-danger btn-lg' %>        
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+<!--search input example 4--><!--search input -->
+<!-- http://stackoverflow.com/questions/17930428/search-form-redirecting-to-search-pagehttp://stackoverflow.com/questions/17930428/search-form-redirecting-to-search-page -->
+<div class="small-8 columns">
+    <%= form_tag :controller => 'search', :action => 'search', :method => 'get', :authenticity_token => false do %>
+        <%= text_field_tag :search, params[:search] %>
+</div>
+<div class="small-4 columns">
+        <%= submit_tag "Search", :name => nil, :class => "button prefix"  %>
+    <% end %>
+</div>
+
+
+
+
+
+<br /><br /><br />
+
+<!-- 3 images -->
+<div class="col-xs-10 col-xs-offset-1 features text-center">  
+<div class="icon-container">
+  <div class="col-sm-4">
+    <h1><%= link_to raw("Seoul") + image_tag("icon.png"), '#' %></h1>  
+    
+  </div>
+
+  <div class="col-sm-4">
+    <h1><%= link_to raw("Busan") + image_tag("icon.png"), '#' %></h1>   
+  </div>
+
+  <div class="col-sm-4">
+    <h1><%= link_to raw("Jeju") + image_tag("icon.png"), '#' %></h1>
+  </div>
+</div>
+</div>
+
+
+<br /><br /><br /><br />

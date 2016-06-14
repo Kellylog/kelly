@@ -1,8 +1,13 @@
 Kelly::Application.routes.draw do
   devise_for :users
-  root 'mainpage#index'
+  root 'mainpages#index'  
+  get 'privacy', to: 'mainpages#privacy'
 
- 
+
+  
+
+
+
 
   
   
