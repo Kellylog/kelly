@@ -1,1 +1,50 @@
 <h1>seouls show</h1>
+<br /><br />
+
+<div class="text-center">
+  <h2><%= @seoul.name %></h2>
+  <i><%= @seoul.address %></i>
+  <br /><br />
+  <p><%= @seoul.description %></p>
+</div>
+  <hr />
+
+
+<!-- photo -->
+<h2>Photo</h2>
+<br /><br /><br />
+<hr />
+
+
+<!-- comment -->
+<h2>Comments</h2>
+<br /><br /><br /><br />
+
+  <!-- map -->
+<div class="show-booyah-box col-xs-10 col-xs-offset-1">
+  <h2>Location</h2> <br />
+  <% if @seoul.latitude.present? && @seoul.longitude.present? %>
+<script>
+
+function initMap() {
+  var myLatLng = {lat: <%= @seoul.latitude %>, lng: <%= @seoul.longitude %>}; 
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: '<%= @seoul.name %>'
+  });
+}
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+<div id="map"></div>
+<% end %>
+
+<br />
