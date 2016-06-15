@@ -1,0 +1,14 @@
+<h1>seouls index</h1>
+
+<div class="booyah-box col-xs-6">
+  <h1 class="text-center">Attractions & Restaurants</h1>
+  <hr />
+  <% @seouls.each do |seoul| %>
+  <div class="inner-box col-xs-5">
+    <h4><%= link_to seoul.name, '#' %></h4><br />
+    <i><%= seoul.description %></i><br />
+    <%= seoul.address %> 
+  </div>
+   <% end %>
+
+   <br class="clr" />

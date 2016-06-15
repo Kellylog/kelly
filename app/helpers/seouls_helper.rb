@@ -1,0 +1,2 @@
+module SeoulsHelper
+end
