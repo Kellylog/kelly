@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -28,14 +29,21 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'bootstrap-sass'
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+# install bootstrap
+gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
+
 
 gem 'simple_form'
 gem 'devise', '>= 3.2.4'
 
-# gem "geocoder", "1.3.4"
-# gem "figaro", ">= 1.0.0"
+gem "geocoder", "1.3.4"
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
