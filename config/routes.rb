@@ -3,7 +3,9 @@ Kelly::Application.routes.draw do
   root 'mainpages#index'  
   get 'privacy', to: 'mainpages#privacy'
 
-  resources :seouls, only: [:index, :show]
+  resources :seouls, only: [:index, :show] do
+    resources :comments, only: :create
+  end
 
 
   

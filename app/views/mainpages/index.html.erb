@@ -17,39 +17,8 @@
 </div>
 
 
-<!--search input example 1--><!--search input -->
-<div class="row">  
-  <div class="col-xs-3 col-xs-offset-4">
-    <div class="input-group input-group-lg">
-      <%= form_tag '#', method: :get do %>
-      <p>
-      <%= text_field_tag :search, params[:search], placeholder: "Where are you going?" %>
-      <%= submit_tag "Search", :name => nil, class: "btn btn-lg" %>   
-      </p>
-      <% end %>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
 
-
-<!--search input example 2--><!--search input -->
-<div class="row">  
-  <div class="col-xs-3 col-xs-offset-4">
-    <div class="input-group input-group-lg">
-  <%= form_tag('#', :method => "get", id: "search-form") do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
-    <span class="input-group-btn">
-      <%= submit_tag "Search", class: 'btn btn-default' %>
-    </span>
-  </p>
-  <% end %>
-    </div>
-  </div>
-</div>
-
-
-<!--search input example 3--><!--search input -->
+<!-- search input -->
 <div class="row">  
   <div class="col-xs-3 col-xs-offset-4">
     <div class="input-group input-group-lg">

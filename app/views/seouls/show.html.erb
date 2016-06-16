@@ -1,8 +1,7 @@
-<h1>seouls show</h1>
-<br /><br />
+
 
 <div class="text-center">
-  <h2><%= @seoul.name %></h2>
+  <h1><%= @seoul.name %></h1>
   <i><%= @seoul.address %></i>
   <br /><br />
   <p><%= @seoul.description %></p>
@@ -18,7 +17,27 @@
 
 <!-- comment -->
 <h2>Comments</h2>
-<br /><br /><br /><br />
+<div class="comments">    
+  <% @seoul.comments.each do |comment| %>
+    <div class="comment">
+      <span class="comment_handle">
+        <%= comment.user.email %> :
+      </span>
+      <%= comment.message %>
+    </div>
+    <% end %>
+
+    <br />
+
+    <h4>Add a comment</h4>
+    <%= simple_form_for @comment, url: seoul_comments_path(@seoul) do |f| %>
+    <%= f.input :message %>
+    <%= f.submit 'Add a comment', class: 'my-btn btn-primary pull-right' %>
+    <% end %>
+
+</div>
+<br />
+<hr />
 
 
 <!-- map -->
@@ -47,5 +66,4 @@ function initMap() {
         src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
 <div id="map"></div>
 <% end %>
-
-<br />
+</div>
