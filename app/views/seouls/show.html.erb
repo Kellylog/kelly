@@ -10,9 +10,50 @@
 
 
 <!-- photo -->
-<h2>Photo</h2>
-<br /><br /><br />
+<h2 class="pull-left">Comments</h1>   &nbsp;
+<!-- Button trigger modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+  Add a photo
+</button>
+<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
+      </div>
+      <%= simple_form_for @photo, url: seoul_photos_path(@seoul) do |p| %>
+        <div class="modal-body">
+          <%= p.input :picture %><br />
+          <%= p.input :caption %><br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= p.submit "Add a Photo", class: 'btn btn-primary' %>
+        <% end %>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="photo-booyah-box">
+<% @seoul.photos.each do |photo| %>
+ <%= image_tag photo.picture, class: 'img-responsive' %><br />
+ <%= photo.caption %>
+<% end %>
+</div>
 <hr />
+
+
+
+
+
+
+
+
+
 
 
 <!-- comment -->
@@ -26,15 +67,12 @@
       <%= comment.message %>
     </div>
     <% end %>
-
     <br />
-
     <h4>Add a comment</h4>
     <%= simple_form_for @comment, url: seoul_comments_path(@seoul) do |f| %>
     <%= f.input :message %>
     <%= f.submit 'Add a comment', class: 'my-btn btn-primary pull-right' %>
     <% end %>
-
 </div>
 <br />
 <hr />

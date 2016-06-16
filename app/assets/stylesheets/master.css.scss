@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-left: 5px;
   padding:20px;
 }
 
@@ -112,3 +111,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;  
 }
 
+.btn-primary {
+  border-radius: 0;
+}
+
+.btn-default {
+  border-radius: 0;
+}

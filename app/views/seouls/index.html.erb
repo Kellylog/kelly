@@ -1,16 +1,49 @@
-<h1>seouls index</h1>
-
+<br />
 <div class="index-booyah-box col-xs-6">
   <h2 class="text-center">Attractions & Restaurants</h2>
   <hr />
+  <!-- checkbox and filter-->
+
+<form class="form-inline" role="form">
+  <div class="form-group">
+    <label>Looking for..</label>     
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Attractions
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Restaurants
+    </label>
+  </div>
+</form>
+
+<hr />
+
+<form class="form-inline" role="form">
+  <div class="form-group">
+    <label>Neighborhoods</label>     
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Hongdae
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Itaewon
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Myeongdong
+    </label>
+  </div>
+</form>
+  
+  <hr />
+  
   <% @seouls.each do |seoul| %>
   <div class="index-booyah-inner-box col-xs-5 sidebar_item">
-    <h4><%= link_to seoul.name, seoul_path(seoul) %></h4><br />
+    <h4><%= link_to seoul.name, seoul_path(seoul), target: '_blank' %></h4><br />
     <i><%= seoul.description %></i><br />
     <%= seoul.address %> 
   </div>
    <% end %>
 </div>
+
   
 
 
