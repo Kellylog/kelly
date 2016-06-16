@@ -10,7 +10,7 @@
 
 
 <!-- photo -->
-<h2 class="pull-left">Comments</h1>   &nbsp;
+<h2 class="pull-left">Photos</h1>   &nbsp;&nbsp;
 <!-- Button trigger modal -->
 <button class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
   Add a photo
@@ -37,10 +37,10 @@
   </div>
 </div>
 
-
 <div class="photo-booyah-box">
 <% @seoul.photos.each do |photo| %>
- <%= image_tag photo.picture, class: 'img-responsive' %><br />
+<td><%= photo.picture %></td>
+ <%= image_tag photo.picture_url(:thumb), class: 'img-responsive' %><br />
  <%= photo.caption %>
 <% end %>
 </div>
@@ -49,14 +49,7 @@
 
 
 
-
-
-
-
-
-
-
-<!-- comment -->
+<!-- comment --><!-- comment --><!-- comment -->
 <h2>Comments</h2>
 <div class="comments">    
   <% @seoul.comments.each do |comment| %>
@@ -71,7 +64,7 @@
     <h4>Add a comment</h4>
     <%= simple_form_for @comment, url: seoul_comments_path(@seoul) do |f| %>
     <%= f.input :message %>
-    <%= f.submit 'Add a comment', class: 'my-btn btn-primary pull-right' %>
+    <%= f.submit 'Add a comment', class: 'btn btn-primary pull-right' %>
     <% end %>
 </div>
 <br />

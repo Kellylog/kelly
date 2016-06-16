@@ -41,6 +41,7 @@ gem "geocoder", "1.3.4"
 gem "figaro", ">= 1.0.0"
 
 gem 'carrierwave'
+gem 'mini_magick', '~> 4.3.1'
 
 
 group :doc do
